@@ -44,16 +44,24 @@ function ganador() {
         votesArray.push(partidoArray[i].votos);
       }
 
-    alert(votesArray)
+    //alert(votesArray)
 
     var votesArray2 = votesArray;
 
     votesArray2.sort(function(a, b){return a - b});
 
-    var min = votesArray.indexOf(votesArray2[0]);
-    var max = votesArray.indexOf(votesArray2[votesArray2.length -1]);
+    //alert(votesArray2)
 
-    alert("El ganador es el partido " + partidoArray[min].partido + " con " + partidoArray[min].votos + " votos")
-    alert("El partido con menos votos fue " + partidoArray[max].partido + " con " + partidoArray[max].votos + " votos")
+    var votesArray3 = [];
+
+    for (i = 0; i < partidoArray.length; i++) {
+        votesArray3.push(partidoArray[i].votos);
+      }
+
+    var min = votesArray3.indexOf(votesArray2[0]);
+    var max = votesArray3.indexOf(votesArray2[votesArray2.length -1]);
+
+    alert("El ganador es el partido " + partidoArray[max].partido + " con " + partidoArray[max].votos + " votos")
+    alert("El partido con menos votos fue " + partidoArray[min].partido + " con " + partidoArray[min].votos + " votos")
 }
 
