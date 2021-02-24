@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 Clave D</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulario de partidos políticos</h1>
+    <br>
+
+    <div class="container">
+        <label for="name">Nombre del partido: </label>
+        <input type="text" id="name" placeholder="ingrese el nombre...">
+        <br>
+        <br>
+        <label for="orientacion">Orientación: </label>
+        <select id="orientacion">
+            <option value="izq">izq</option>
+            <option value="centro">centro</option>
+            <option value="der">der</option>
+        </select>
+        <br>
+        <br>
+        <label for="cantidad">Cantidad de votos: </label>
+        <input type="number" id="cantidad" min="0" placeholder="ingrese la cantidad...">
+        <br>
+        <br>
+        <button onclick="processForm()">Enviar</button>
+    </div>
+    <br>
+    <br>
+    <button onclick="ganador()">Ganador</button>
+    <br>
+    <br>
+    <table style="width:100%" id="tabla">
+        <tr>
+            <th>nombre</th>
+            <th>orientacion</th>
+            <th>cantidad</th>
+            <th>estado</th>
+        </tr>
+        <tr>
+            <td>tortuga</td>
+            <td>izq</td>
+            <td>50</td>
+            <td>50=</td>
+        </tr>
+        <tr>
+            <td>leon</td>
+            <td>centro</td>
+            <td>65</td>
+            <td>50+</td>
+        </tr>
+        <tr>
+            <td>elefante</td>
+            <td>der</td>
+            <td>43</td>
+            <td>50-</td>
+        </tr>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
